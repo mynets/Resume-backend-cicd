@@ -1,0 +1,21 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "Resume-backend"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-8x34hz8qsb28"
+s3_prefix = "Resume-backend"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "Stage=\"dev\" TableName=\"Visitor\""
+
+[y]
+[y.deploy]
+[y.deploy.parameters]
+stack_name = "Resume-backend-v2"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-8x34hz8qsb28"
+s3_prefix = "Resume-backend-v2"
+region = "us-east-1"
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "Stage=\"dev\" TableName=\"Visitor\""
